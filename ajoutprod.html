@@ -1,0 +1,46 @@
+<html>
+<html lang="en">
+<head>
+  <title>Ajouter Produit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form method="POST" action="ajoutprod.php">
+<div class="container">
+  <center><h2>Ajouter Produit</h2></center>
+ 
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="usr">Reference du produit:</label>
+      <input type="text" class="form-control" id="usr" name="id_prod">
+    </div>
+    <div class="form-group">
+      <label for="usr">Nom du produit:</label>
+      <input type="text" class="form-control" id="usr" name="Nom_prod">
+    </div>
+    <div class="form-group">
+      <label for="usr">les Tailles du produit:</label>
+      <input type="text" class="form-control" id="usr" name="taille">
+    </div>
+    <div class="form-group">
+      <label for="usr">Couleur du produit:</label>
+      <input type="text" class="form-control" id="usr" name="couleur">
+    </div>
+    <div class="form-group">
+      <label for="usr">Prix:</label>
+      <input type="number" class="form-control" id="usr" name="prix">
+    </div>
+    <button type="submit" name="Ajouter" value="ajouter" class="btn btn-primary">Ajouter</button>
+     
+      <form method="POST" action="afficherprod.php">
+             <button type="submit" name="retour" value="retour" class="btn btn-danger">Retour</button>
+      </form>
+</div>
+
+</body>
+</html>
