@@ -158,6 +158,28 @@ class produit {
 
     }
 
+    function modifierstock($id,$qte){
+        $sql="UPDATE produit SET STOCK=STOCK+:stock where ID= :id";
+
+        $db = config::getConnexion();
+
+        $req=$db->prepare($sql);
+
+        $req->bindValue(':id',$id);
+        $req->bindValue(':stock',$qte);
+        try{
+            $req->execute();
+
+        }
+        catch (Exception $e){
+            die('Erreur: '.$e->getMessage());
+        }
+
+
+
+
+    }
+
     function afficher($var){
 
         $query = "SELECT * FROM produit LIMIT $var,6";
