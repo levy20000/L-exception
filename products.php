@@ -45,7 +45,7 @@ session_start();
 	<!-- HEADER -->
 <?php include 'header.php' ?>
 
-    <?php include "../core/produit.php";
+    <?php //include "../core/produit.php";
     include "../core/categorie.php";
     $p=new produit();
     $c=new categorie();
@@ -250,7 +250,7 @@ session_start();
 										<div class="product-btns">
 											<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 											<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+											<button class="primary-btn add-to-cart" onclick="addToCart('<?php echo $row["ID"] ; ?>','<?php echo $row["name"] ; ?>','<?php echo $row["prix"] ; ?>')"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -401,7 +401,67 @@ session_start();
 		<!-- /container -->
 	</footer>
 	<!-- /FOOTER -->
+    <script>
+        function addToCart(id,name,prix) {
+            obj = {
+                'id':id,
+                'name':name,
+                'prix':prix,
+                'quantite' : 1
+            }
+            console.log(obj);
+            request = $.ajax({
+                url: "../core/addToCart.php",
+                type: "post",
+                data: {data: [obj]}
+            });
 
+// callback handler that will be called on success
+            request.done(function (response, textStatus, jqXHR){
+                // log a message to the console
+                console.log(response);
+                alert('l\'article ' + name + 'à été ajouté au panier');
+               $('#mycart').load("cartreload.php");
+            });
+
+// callback handler that will be called on failure
+            request.fail(function (jqXHR, textStatus, errorThrown){
+                // log the error to the console
+                console.error(
+                    "The following error occured: "+
+                    textStatus, errorThrown
+                );
+            })
+        }
+        function removeFromCart(id) {
+            obj = {
+                'id':id
+            }
+            console.log(obj);
+            request = $.ajax({
+                url: "../core/deleteFromCart.php",
+                type: "post",
+                data: {data: [obj]}
+            });
+
+// callback handler that will be called on success
+            request.done(function (response, textStatus, jqXHR){
+                // log a message to the console
+                console.log(response);
+                alert('l\'article ' + name + 'à été supprimé du panier');
+                $('#mycart').load("cartreload.php");
+            });
+
+// callback handler that will be called on failure
+            request.fail(function (jqXHR, textStatus, errorThrown){
+                // log the error to the console
+                console.error(
+                    "The following error occured: "+
+                    textStatus, errorThrown
+                );
+            })
+        }
+    </script>
 	<!-- jQuery Plugins -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
