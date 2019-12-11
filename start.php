@@ -1,20 +1,26 @@
 <?PHP
-include "../entities/produit.php";
-include "../core/prod.php";
-$prodC=new produitc();
-$prodC->afficherprod($product);
+include "../entities/client.php";
+include "../core/clientc.php";
+$clientC=new clientC();
+$clientC->afficherclient($client);
 echo "****************";
+echo "<br>";
+echo "id_client:".$client->getid();
+echo "<br>";
+echo "nom_client:".$client->getNom();
+echo "<br>";
+echo "prenom_client:".$client->getPrenom();
+echo "<br>";
+echo "mdp_client:".$client->getmdp();
+echo "<br>";
+echo "telephone_client:".$client->getTelephone();
+echo "<br>";
+echo "adresse_client:".$client->getadresse();
+echo "<br>";
+echo "ville_client:".$client->getville();
+echo "<br>";
 
-echo "<br>";
-echo "id_prod:".$product->getid();
-echo "<br>";
-echo "Nom_prod:".$product->getNom();
-echo "<br>";
-echo ":taille".$product->getTaille();
-echo "<br>";
-echo ":couleur".$product->getCouleur();
-echo "<br>";
-echo ":prix".$product->getPrix();
-echo "<br>";
+
+
 
 ?>
