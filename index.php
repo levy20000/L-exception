@@ -1,608 +1,823 @@
-<!doctype html>
-<html lang="en">
- 
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/libs/css/style.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
-    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
 
-<body>
-    <!-- ============================================================== -->
-    <!-- main wrapper -->
-    <!-- ============================================================== -->
-<?php include 'header.php' ?>
-        <!-- ============================================================== -->
-        <!-- end left sidebar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- wrapper  -->
-        <!-- ============================================================== -->
-        <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">E-commerce Dashboard Template </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="ecommerce-widget">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../../index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
 
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Total Revenue</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Affiliate Revenue</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue2"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Refunds</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">0.00</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            <span>N/A</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue3"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Avg. Revenue Per User</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$28000</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>-2.00%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue4"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- ============================================================== -->
-                      
-                            <!-- ============================================================== -->
-
-                                          <!-- recent orders  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Recent Orders</h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">#</th>
-                                                        <th class="border-0">Image</th>
-                                                        <th class="border-0">Product Name</th>
-                                                        <th class="border-0">Product Id</th>
-                                                        <th class="border-0">Quantity</th>
-                                                        <th class="border-0">Price</th>
-                                                        <th class="border-0">Order Time</th>
-                                                        <th class="border-0">Customer</th>
-                                                        <th class="border-0">Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #1 </td>
-                                                        <td>id000001 </td>
-                                                        <td>20</td>
-                                                        <td>$80.00</td>
-                                                        <td>27-08-2018 01:22:12</td>
-                                                        <td>Patricia J. King </td>
-                                                        <td><span class="badge-dot badge-brand mr-1"></span>InTransit </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #2 </td>
-                                                        <td>id000002 </td>
-                                                        <td>12</td>
-                                                        <td>$180.00</td>
-                                                        <td>25-08-2018 21:12:56</td>
-                                                        <td>Rachel J. Wicker </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Delivered </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #3 </td>
-                                                        <td>id000003 </td>
-                                                        <td>23</td>
-                                                        <td>$820.00</td>
-                                                        <td>24-08-2018 14:12:77</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Delivered </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #4 </td>
-                                                        <td>id000004 </td>
-                                                        <td>34</td>
-                                                        <td>$340.00</td>
-                                                        <td>23-08-2018 09:12:35</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Delivered </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end recent orders  -->
-
-    
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- customer acquistion  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Customer Acquisition</h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
-                                        <div class="text-center">
-                                            <span class="legend-item mr-2">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Returning</span>
-                                            </span>
-                                            <span class="legend-item mr-2">
-
-                                                    <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">First Time</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end customer acquistion  -->
-                            <!-- ============================================================== -->
-                        </div>
-                        <div class="row">
-                            <!-- ============================================================== -->
-              				                        <!-- product category  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header"> Product Category</h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
-                                        <div class="text-center m-t-40">
-                                            <span class="legend-item mr-3">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Man</span>
-                                            </span>
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Woman</span>
-                                            </span>
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-info mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Accessories</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end product category  -->
-                                   <!-- product sales  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <!-- <div class="float-right">
-                                                <select class="custom-select">
-                                                    <option selected>Today</option>
-                                                    <option value="1">Weekly</option>
-                                                    <option value="2">Monthly</option>
-                                                    <option value="3">Yearly</option>
-                                                </select>
-                                            </div> -->
-                                        <h5 class="mb-0"> Product Sales</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="ct-chart-product ct-golden-section"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end product sales  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <!-- ============================================================== -->
-                                <!-- top perfomimg  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header">Top Performing Campaigns</h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table no-wrap p-table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">Campaign</th>
-                                                        <th class="border-0">Visits</th>
-                                                        <th class="border-0">Revenue</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Campaign#1</td>
-                                                        <td>98,789 </td>
-                                                        <td>$4563</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#2</td>
-                                                        <td>2,789 </td>
-                                                        <td>$325</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#3</td>
-                                                        <td>1,459 </td>
-                                                        <td>$225</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#4</td>
-                                                        <td>5,035 </td>
-                                                        <td>$856</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#5</td>
-                                                        <td>10,000 </td>
-                                                        <td>$1000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#5</td>
-                                                        <td>10,000 </td>
-                                                        <td>$1000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">
-                                                            <a href="#" class="btn btn-outline-light float-right">Details</a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- end top perfomimg  -->
-                                <!-- ============================================================== -->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- ============================================================== -->
-                            <!-- sales  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Sales</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.86%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- new customer  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">New Customer</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1245</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">10%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end new customer  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- visitor  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Visitor</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">13000</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end visitor  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- total orders  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Total Orders</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1340</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">4%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end total orders  -->
-                            <!-- ============================================================== -->
-                        </div>
-                        <div class="row">
-                            <!-- ============================================================== -->
-                            <!-- total revenue  -->
-                            <!-- ============================================================== -->
-  
-                            
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- category revenue  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Revenue by Category</h5>
-                                    <div class="card-body">
-                                        <div id="c3chart_category" style="height: 420px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end category revenue  -->
-                            <!-- ============================================================== -->
-
-                            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header"> Total Revenue</h5>
-                                    <div class="card-body">
-                                        <div id="morris_totalrevenue"></div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <!-- ============================================================== -->
-                                <!-- social source  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Sales By Social Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">120 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">99 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">76 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">56 Sales</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">36 Sales</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- end social source  -->
-                                <!-- ============================================================== -->
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <!-- ============================================================== -->
-                                <!-- sales traffice source  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Sales By Traffic Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="traffic-sales list-group list-group-flush">
-                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Direct</span><span class="traffic-sales-amount">$4000.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Search<span class="traffic-sales-amount">$3123.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Social<span class="traffic-sales-amount ">$3099.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Referrals<span class="traffic-sales-amount ">$2220.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">4.02%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Email<span class="traffic-sales-amount">$1567.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">3.86%</span></span>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales traffice source  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- sales traffic country source  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Sales By Country Traffic Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="country-sales list-group list-group-flush">
-                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
-                                                <span class="">United States</span><span class="float-right text-dark">78%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales traffice country source  -->
-                            <!-- ============================================================== -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <div class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                             Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+    <?php
+    include 'sidebar.php'
+    ?>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
     </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="assets/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>150</h3>
+
+                <p>New Orders</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                <p>Bounce Rate</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>44</h3>
+
+                <p>User Registrations</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>65</h3>
+
+                <p>Unique Visitors</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-7 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-chart-pie mr-1"></i>
+                  Sales
+                </h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <!-- Morris chart - Sales -->
+                  <div class="chart tab-pane active" id="revenue-chart"
+                       style="position: relative; height: 300px;">
+                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>                         
+                   </div>
+                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
+                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>                         
+                  </div>  
+                </div>
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">Direct Chat</h3>
+
+                <div class="card-tools">
+                  <span data-toggle="tooltip" title="3 New Messages" class="badge badge-primary">3</span>
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Contacts"
+                          data-widget="chat-pane-toggle">
+                    <i class="fas fa-comments"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <!-- Conversations are loaded here -->
+                <div class="direct-chat-messages">
+                  <!-- Message. Default to the left -->
+                  <div class="direct-chat-msg">
+                    <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-left">Alexander Pierce</span>
+                      <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                    </div>
+                    <!-- /.direct-chat-infos -->
+                    <img class="direct-chat-img" src="../../dist/img/user1-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
+                    <div class="direct-chat-text">
+                      Is this template really for free? That's unbelievable!
+                    </div>
+                    <!-- /.direct-chat-text -->
+                  </div>
+                  <!-- /.direct-chat-msg -->
+
+                  <!-- Message to the right -->
+                  <div class="direct-chat-msg right">
+                    <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-right">Sarah Bullock</span>
+                      <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                    </div>
+                    <!-- /.direct-chat-infos -->
+                    <img class="direct-chat-img" src="../../dist/img/user3-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
+                    <div class="direct-chat-text">
+                      You better believe it!
+                    </div>
+                    <!-- /.direct-chat-text -->
+                  </div>
+                  <!-- /.direct-chat-msg -->
+
+                  <!-- Message. Default to the left -->
+                  <div class="direct-chat-msg">
+                    <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-left">Alexander Pierce</span>
+                      <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
+                    </div>
+                    <!-- /.direct-chat-infos -->
+                    <img class="direct-chat-img" src="../../dist/img/user1-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
+                    <div class="direct-chat-text">
+                      Working with AdminLTE on a great new app! Wanna join?
+                    </div>
+                    <!-- /.direct-chat-text -->
+                  </div>
+                  <!-- /.direct-chat-msg -->
+
+                  <!-- Message to the right -->
+                  <div class="direct-chat-msg right">
+                    <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-right">Sarah Bullock</span>
+                      <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
+                    </div>
+                    <!-- /.direct-chat-infos -->
+                    <img class="direct-chat-img" src="../../dist/img/user3-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-img -->
+                    <div class="direct-chat-text">
+                      I would love to.
+                    </div>
+                    <!-- /.direct-chat-text -->
+                  </div>
+                  <!-- /.direct-chat-msg -->
+
+                </div>
+                <!--/.direct-chat-messages-->
+
+                <!-- Contacts are loaded here -->
+                <div class="direct-chat-contacts">
+                  <ul class="contacts-list">
+                    <li>
+                      <a href="#">
+                        <img class="contacts-list-img" src="../../dist/img/user1-128x128.jpg">
+
+                        <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Count Dracula
+                            <small class="contacts-list-date float-right">2/28/2015</small>
+                          </span>
+                          <span class="contacts-list-msg">How have you been? I was...</span>
+                        </div>
+                        <!-- /.contacts-list-info -->
+                      </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                      <a href="#">
+                        <img class="contacts-list-img" src="../../dist/img/user7-128x128.jpg">
+
+                        <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Sarah Doe
+                            <small class="contacts-list-date float-right">2/23/2015</small>
+                          </span>
+                          <span class="contacts-list-msg">I will be waiting for...</span>
+                        </div>
+                        <!-- /.contacts-list-info -->
+                      </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                      <a href="#">
+                        <img class="contacts-list-img" src="../../dist/img/user3-128x128.jpg">
+
+                        <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Nadia Jolie
+                            <small class="contacts-list-date float-right">2/20/2015</small>
+                          </span>
+                          <span class="contacts-list-msg">I'll call you back at...</span>
+                        </div>
+                        <!-- /.contacts-list-info -->
+                      </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                      <a href="#">
+                        <img class="contacts-list-img" src="../../dist/img/user5-128x128.jpg">
+
+                        <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Nora S. Vans
+                            <small class="contacts-list-date float-right">2/10/2015</small>
+                          </span>
+                          <span class="contacts-list-msg">Where is your new...</span>
+                        </div>
+                        <!-- /.contacts-list-info -->
+                      </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                      <a href="#">
+                        <img class="contacts-list-img" src="../../dist/img/user6-128x128.jpg">
+
+                        <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            John K.
+                            <small class="contacts-list-date float-right">1/27/2015</small>
+                          </span>
+                          <span class="contacts-list-msg">Can I take a look at...</span>
+                        </div>
+                        <!-- /.contacts-list-info -->
+                      </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                      <a href="#">
+                        <img class="contacts-list-img" src="../../dist/img/user8-128x128.jpg">
+
+                        <div class="contacts-list-info">
+                          <span class="contacts-list-name">
+                            Kenneth M.
+                            <small class="contacts-list-date float-right">1/4/2015</small>
+                          </span>
+                          <span class="contacts-list-msg">Never mind I found...</span>
+                        </div>
+                        <!-- /.contacts-list-info -->
+                      </a>
+                    </li>
+                    <!-- End Contact Item -->
+                  </ul>
+                  <!-- /.contacts-list -->
+                </div>
+                <!-- /.direct-chat-pane -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <form action="#" method="post">
+                  <div class="input-group">
+                    <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                    <span class="input-group-append">
+                      <button type="button" class="btn btn-primary">Send</button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="ion ion-clipboard mr-1"></i>
+                  To Do List
+                </h3>
+
+                <div class="card-tools">
+                  <ul class="pagination pagination-sm">
+                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <ul class="todo-list" data-widget="todo-list">
+                  <li>
+                    <!-- drag handle -->
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <!-- checkbox -->
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                      <label for="todoCheck1"></label>
+                    </div>
+                    <!-- todo text -->
+                    <span class="text">Design a nice theme</span>
+                    <!-- Emphasis label -->
+                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
+                    <!-- General tools such as edit or delete-->
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash-o"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
+                      <label for="todoCheck2"></label>
+                    </div>
+                    <span class="text">Make the theme responsive</span>
+                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash-o"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                      <label for="todoCheck3"></label>
+                    </div>
+                    <span class="text">Let theme shine like a star</span>
+                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash-o"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo4" id="todoCheck4">
+                      <label for="todoCheck4"></label>
+                    </div>
+                    <span class="text">Let theme shine like a star</span>
+                    <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash-o"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo5" id="todoCheck5">
+                      <label for="todoCheck5"></label>
+                    </div>
+                    <span class="text">Check your messages and notifications</span>
+                    <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash-o"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo6" id="todoCheck6">
+                      <label for="todoCheck6"></label>
+                    </div>
+                    <span class="text">Let theme shine like a star</span>
+                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash-o"></i>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <button type="button" class="btn btn-info float-right"><i class="fas fa-plus"></i> Add item</button>
+              </div>
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
+
+            <!-- Map card -->
+            <div class="card bg-gradient-primary">
+              <div class="card-header border-0">
+                <h3 class="card-title">
+                  <i class="fas fa-map-marker-alt mr-1"></i>
+                  Visitors
+                </h3>
+                <!-- card tools -->
+                <div class="card-tools">
+                  <button type="button"
+                          class="btn btn-primary btn-sm daterange"
+                          data-toggle="tooltip"
+                          title="Date range">
+                    <i class="far fa-calendar-alt"></i>
+                  </button>
+                  <button type="button"
+                          class="btn btn-primary btn-sm"
+                          data-card-widget="collapse"
+                          data-toggle="tooltip"
+                          title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <div class="card-body">
+                <div id="world-map" style="height: 250px; width: 100%;"></div>
+              </div>
+              <!-- /.card-body-->
+              <div class="card-footer bg-transparent">
+                <div class="row">
+                  <div class="col-4 text-center">
+                    <div id="sparkline-1"></div>
+                    <div class="text-white">Visitors</div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-4 text-center">
+                    <div id="sparkline-2"></div>
+                    <div class="text-white">Online</div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-4 text-center">
+                    <div id="sparkline-3"></div>
+                    <div class="text-white">Sales</div>
+                  </div>
+                  <!-- ./col -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+            <!-- /.card -->
+
+            <!-- solid sales graph -->
+            <div class="card bg-gradient-info">
+              <div class="card-header border-0">
+                <h3 class="card-title">
+                  <i class="fas fa-th mr-1"></i>
+                  Sales Graph
+                </h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer bg-transparent">
+                <div class="row">
+                  <div class="col-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
+                           data-fgColor="#39CCCC">
+
+                    <div class="text-white">Mail-Orders</div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
+                           data-fgColor="#39CCCC">
+
+                    <div class="text-white">Online</div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
+                           data-fgColor="#39CCCC">
+
+                    <div class="text-white">In-Store</div>
+                  </div>
+                  <!-- ./col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+
+            <!-- Calendar -->
+            <div class="card bg-gradient-success">
+              <div class="card-header border-0">
+
+                <h3 class="card-title">
+                  <i class="far fa-calendar-alt"></i>
+                  Calendar
+                </h3>
+                <!-- tools card -->
+                <div class="card-tools">
+                  <!-- button with a dropdown -->
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+                      <i class="fas fa-bars"></i></button>
+                    <div class="dropdown-menu float-right" role="menu">
+                      <a href="#" class="dropdown-item">Add new event</a>
+                      <a href="#" class="dropdown-item">Clear events</a>
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item">View calendar</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <!-- /. tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body pt-0">
+                <!--The calendar -->
+                <div id="calendar" style="width: 100%"></div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.1
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../../plugins/moment/moment.min.js"></script>
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../../dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
 </body>
- 
 </html>
